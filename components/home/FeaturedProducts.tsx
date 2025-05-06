@@ -9,9 +9,11 @@ async function FeaturedProducts() {
     return <EmptyList />;
   }
 
-  return <section>
-    <SectionTitle text="Featured products" />
-    <ProductsGrid products={products} />
-  </section>;
+  return (
+    <section className="pt-20">
+      <SectionTitle text="Featured products" />
+      <ProductsGrid products={products} />
+    </section>
+  );
 }
 export default FeaturedProducts;
