@@ -13,7 +13,7 @@ async function ProductsContainer({
   layout: string;
   search: string;
 }) {
-  const products = await fetchAllProducts();
+  const products = await fetchAllProducts({search});
   const totalProducts = products.length;
   const serachTerm = search ? `&search=${search}` : "";
   if (totalProducts === 0) {
@@ -28,7 +28,7 @@ async function ProductsContainer({
       <section>
         <div className="flex justify-between items-center">
           <h4 className="font-medium text-lg">
-            {totalProducts} produsc{totalProducts > 1 && "s"}
+            {totalProducts} product{totalProducts > 1 && "s"}
           </h4>
           <div className="flex gap-x-4">
             <Button
